@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const [users, setUsers] = useState([]);
   const router = useRouter();
-  const storage = window.localStorage;
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       router.push("/login");
